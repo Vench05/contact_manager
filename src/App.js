@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import { Provider } from "./Context";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 
 import Contacts from "./components/contact/Contacts";
 import AddContact from "./components/contact/AddContact";
@@ -15,7 +15,7 @@ import EditContact from "./components/contact/EditContact";
 function App() {
   return (
     <Provider>
-      <BrowserRouter>
+      <HashRouter>
         <div className="App">
           <Header branding="Contact Manger" />
           <div className="container">
@@ -29,7 +29,7 @@ function App() {
             </Switch>
           </div>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   );
 }
